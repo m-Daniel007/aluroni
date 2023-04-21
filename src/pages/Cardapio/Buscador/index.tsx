@@ -10,6 +10,7 @@ export default function Buscador({busca, setBusca}: BuscadorProps) {
     <input
         value={busca}
         onChange={(e) => setBusca(e.target.value)}
+        placeholder='Busque por um prato'
     />
     <CgSearch color='#4c4d5e' size={20} />
   </div>
