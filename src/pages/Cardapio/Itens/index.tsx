@@ -1,6 +1,6 @@
 import styles from "./Itens.module.scss";
-import React, { useEffect, useState } from "react";
-import cardapio from "./itens.json";
+import { useEffect, useState } from "react";
+import cardapio from "data/cardapio.json";
 import Item from "./Item";
 
 interface IitensProps {
@@ -47,7 +47,7 @@ export default function Itens(props: IitensProps) {
       return testaBusca(item.title) && testaFiltro(item.category.id);
     });
     setLista(ordenar(listaFiltrada));
-  }, [busca, filtro, ordenador,]);
+  }, [busca, filtro, ordenador]);
 
   return (
     <div className={styles.itens}>
